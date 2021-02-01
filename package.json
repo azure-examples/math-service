@@ -2,7 +2,7 @@
   "name": "math-service",
   "version": "1.0.0",
   "description": "Example NodeJS AKS Service Deployed via Github Actions and Harness",
-  "main": "src/api.js",
+  "main": "src/main/api.js",
   "scripts": {
     "start": "node .",
     "test": "nyc --reporter=lcov mocha src/test/**/*.test.js --reporter mocha-sonar-generic-reporter --reporter-options outputFile=.mocha_output/results.xml",
