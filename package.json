@@ -1,0 +1,29 @@
+{
+  "name": "math-service",
+  "version": "1.0.0",
+  "description": "Example NodeJS AKS Service Deployed via Github Actions and Harness",
+  "main": "src/api.js",
+  "scripts": {
+    "start": "node .",
+    "test": "nyc --reporter=lcov mocha src/test/**/*.test.js --reporter mocha-sonar-generic-reporter --reporter-options outputFile=.mocha_output/results.xml",
+    "report": "nyc report",
+    "lint": "eslint . --ext js --ignore-path .gitignore"
+  },
+  "author": "Dave Woodward",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "finalhandler": "^1.1.2"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "eslint": "^7.19.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "mocha": "^8.2.1",
+    "mocha-sonar-generic-reporter": "0.0.3",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4",
+    "supertest": "^6.1.3"
+  }
+}
