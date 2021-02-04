@@ -70,7 +70,7 @@ phases:
         host: host.docker.internal
         outputVars: ''
         publishAsVar: false
-        scriptString: docker run --name math-service-development -p 8080:8080 --rm -d dwoodward/math-service:development
+        scriptString: /usr/local/bin/docker run --name math-service-development -p 8080:8080 --rm -d dwoodward/math-service:development
         scriptType: BASH
         sshKeyRef: hohjKf-jRGu4DluYX-4H_w
         sweepingOutputName: null
