@@ -27,10 +27,18 @@ jobs:
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       -
+        name: Prepare
+        id: prep
+        run: |
+          DOCKER_IMAGE=dwoodward/math-service
+          BRANCH=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's#/+#-#g')
+          TAGS="${DOCKER_IMAGE}:${BRANCH},${DOCKER_IMAGE}:${GITHUB_SHA::8}"
+          echo ::set-output name=tags::${TAGS}
+      -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       -
-        name: Login to DockerHub
+        name: Login to Docker Hub
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -41,6 +49,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: |
-            ${{ "dwoodward/math-service:$GITHUB_REF" }}
-            ${{ "dwoodward/math-service:$GITHUB_SHA" }}
+          tags: ${{ steps.prep.outputs.tags }}
