@@ -46,7 +46,7 @@ phases:
         host: host.docker.internal
         outputVars: ''
         publishAsVar: false
-        scriptString: docker stop math-service-development || true
+        scriptString: docker stop math-service-development 2>/dev/null || true
         scriptType: BASH
         sshKeyRef: hohjKf-jRGu4DluYX-4H_w
         sweepingOutputName: null
