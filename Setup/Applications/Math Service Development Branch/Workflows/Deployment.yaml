@@ -18,7 +18,7 @@ notificationRules:
   - aCQkr7DHRDGyDOHs4R8HjQ
 phases:
 - type: SSH
-  computeProviderName: Macbook Pro
+  computeProviderName: Macbook Pro Cloud Provider
   daemonSet: false
   infraDefinitionName: Macbook Pro Docker Engine
   name: Phase 1
@@ -98,7 +98,7 @@ preDeploymentSteps:
   name: Artifact Check
 rollbackPhases:
 - type: SSH
-  computeProviderName: Macbook Pro
+  computeProviderName: Macbook Pro Cloud Provider
   daemonSet: false
   infraDefinitionName: Macbook Pro Docker Engine
   name: Rollback Phase 1
