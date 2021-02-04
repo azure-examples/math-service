@@ -48,7 +48,7 @@ phases:
         publishAsVar: false
         scriptString: |-
           ls -l /usr/local/bin/docker || true
-          docker stop math-service-development 2>/dev/null || true
+          docker stop math-service-development || true
         scriptType: BASH
         sshKeyRef: hohjKf-jRGu4DluYX-4H_w
         sweepingOutputName: null
