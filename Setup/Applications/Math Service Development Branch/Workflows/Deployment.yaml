@@ -39,19 +39,22 @@ phases:
     - type: SHELL_SCRIPT
       name: Shell Script
       properties:
-        commandPath: null
+        commandPath: /tmp
         connectionAttributes: null
-        executeOnDelegate: true
-        host: null
+        connectionType: SSH
+        executeOnDelegate: false
+        host: host.docker.internal
         outputVars: ''
         publishAsVar: false
         scriptString: docker stop math-service-development || true
         scriptType: BASH
-        sshKeyRef: null
+        sshKeyRef: hohjKf-jRGu4DluYX-4H_w
         sweepingOutputName: null
         sweepingOutputScope: null
         templateExpressions: null
-        templateVariables: ''
+        templateUuid: null
+        templateVariables: null
+        templateVersion: null
         timeoutMillis: 60000
     stepsInParallel: false
   - type: DEPLOY_SERVICE
