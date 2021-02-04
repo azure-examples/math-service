@@ -1,0 +1,4 @@
+harnessApiVersion: '1.0'
+type: DOCKER
+imageName: dwoodward/math-service
+serverName: Docker Hub
