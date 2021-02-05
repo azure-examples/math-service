@@ -28,6 +28,23 @@ phases:
     steps:
     - type: K8S_DEPLOYMENT_ROLLING
       name: Rollout Deployment
+    - type: TERRAFORM_APPLY
+      name: Terraform Apply
+      properties:
+        backendConfigs: null
+        delegateTag: ''
+        environmentVariables: null
+        exportPlanToApplyStep: false
+        inheritApprovedPlan: false
+        name: Terraform Apply
+        provisionerName: AKS Cluster
+        runPlanOnly: false
+        targets: null
+        tfVarFiles: ''
+        tfVarGitFileConfig: null
+        timeoutMillis: 300000
+        variables: null
+        workspace: ''
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
