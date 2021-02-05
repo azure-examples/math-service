@@ -1,0 +1,12 @@
+harnessApiVersion: '1.0'
+type: INFRA_DEFINITION
+cloudProviderType: AZURE
+deploymentType: KUBERNETES
+infrastructure:
+- type: AZURE_KUBERNETES
+  cloudProviderName: Microsoft Azure Pay as You Go Subscription Cloud Provider
+  clusterName: aks-central-us-development
+  namespace: default
+  releaseName: release-${infra.kubernetes.infraId}
+  resourceGroup: aks-central-us-development
+  subscriptionId: 1183c551-c35f-45fa-8bad-dea69fbe514a
