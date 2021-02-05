@@ -24,9 +24,6 @@ phases:
   name: Rolling
   phaseSteps:
   - type: K8S_PHASE_STEP
-    name: Verify
-    stepsInParallel: false
-  - type: K8S_PHASE_STEP
     name: Deploy
     steps:
     - type: K8S_DEPLOYMENT_ROLLING
@@ -48,6 +45,9 @@ phases:
         timeoutMillis: 300000
         variables: null
         workspace: ''
+    stepsInParallel: false
+  - type: K8S_PHASE_STEP
+    name: Verify
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
