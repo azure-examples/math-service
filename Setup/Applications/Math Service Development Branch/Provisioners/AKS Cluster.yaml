@@ -1,6 +1,0 @@
-harnessApiVersion: '1.0'
-type: TERRAFORM
-path: terraform/
-skipRefreshBeforeApplyingPlan: false
-sourceRepoBranch: development
-sourceRepoSettingName: Math Service
